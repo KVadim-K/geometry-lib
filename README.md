@@ -1,5 +1,4 @@
-# 📐 Geometry Library ![CI](https://github.com/KVadim-K/geometry-lib/actions/workflows/ci.yml/badge.svg)
-
+# 📐 Geometry Library ![CI](https://github.com/KVadim-K/geometry-lib/actions/workflows/ci.yml/badge.svg) ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
 Небольшая учебная библиотека на **Python**, реализующая вычисление площадей геометрических фигур с акцентом на простую расширяемую архитектуру и юнит-тесты.
 
 ## ✨ Возможности
@@ -14,16 +13,16 @@
 ```
 geometry-lib/
 ├── geometry/
+│ ├── init.py # Публичный API библиотеки
+│ ├── shapes.py # Абстракции/интерфейсы (Shape, AreaComputable)
 │ ├── circle.py # Класс круга
 │ ├── triangle.py # Класс треугольника
-│ ├── shapes.py # Базовые абстракции фигур
-│ ├── factory.py # Фабрика для создания фигур
-│ └── init.py
-├── tests/ # Unit-тесты (pytest)
+│ └── factory.py # Фабрика и реестр фигур
+├── tests/ # Юнит-тесты (pytest)
 │ ├── test_circle.py
 │ ├── test_triangle.py
 │ └── test_api.py
-├── .github/workflows/ci.yml # CI-пайплайн GitHub Actions
+├── .github/workflows/ci.yml # CI: прогон тестов на GitHub Actions
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -69,14 +68,6 @@ pytest
 
 ```
 11 passed, 0 failed
-```
-
-## ⚙️ Установка и использование
-
-```bash
-python -m venv .venv
-source .venv/bin/activate # Windows: .venv\\Scripts\\activate
-pip install -e .[dev]
 ```
 
 ## 🧰 CI/CD
